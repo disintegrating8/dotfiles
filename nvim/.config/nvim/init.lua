@@ -1,2 +1,2 @@
-require("bonam.core")
-require("bonam.lazy")
+require(".core")
+require(".lazy")
