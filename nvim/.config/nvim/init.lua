@@ -1,2 +1,2 @@
-require(".core")
-require(".lazy")
+require("preluminance.core")
+require("preluminance.lazy")
