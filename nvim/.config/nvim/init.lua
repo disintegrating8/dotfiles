@@ -369,7 +369,7 @@ require('lazy').setup({
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   require 'kickstart.plugins.autocompletion',
-  require 'kickstart.plugins.autoformat',
+  -- require 'kickstart.plugins.autoformat',
   require 'kickstart.plugins.colorscheme',
   require 'kickstart.plugins.lsp-config',
   require 'kickstart.plugins.telescope',
