@@ -69,4 +69,5 @@ ctrl + alt - s : yabai --start-service
 ctrl + alt - r : yabai --restart-service
 
 # Opening Applications
-alt - return : open -a /Applications/kitty.app
+alt - return : open -n -a /Applications/kitty.app
+# alt - b : open -n -a /Applications/Brave-Browser.app
