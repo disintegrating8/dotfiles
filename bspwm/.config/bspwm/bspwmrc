@@ -1,7 +1,7 @@
 #! /bin/bash
 
 pgrep -x sxhkd > /dev/null || sxhkd -c $HOME/.config/bspwm/sxhkdrc &
-~/.config/bspwm/polybar/launch.sh &
+$HOME/.config/polybar/launch.sh &
 pgrep -x dunst > /dev/null || dunst -config $HOME/.config/bspwm/dunstrc &
 pgrep -x picom > /dev/null || picom --config $HOME/.config/bspwm/picom.conf &
 
