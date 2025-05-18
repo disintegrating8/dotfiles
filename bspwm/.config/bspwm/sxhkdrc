@@ -3,7 +3,7 @@ super + Return
 	kitty
 
 # App launcher
-super + d
+super + space
 	rofi -show drun -config .config/bspwm/rofi/configs/config.rasi -width 420
 
 # Powermenu
