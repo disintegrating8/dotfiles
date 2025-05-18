@@ -12,11 +12,11 @@ super + x
 
 # Open file manager
 super + shift + Return
-	krusader
+	thunar
 
 # Open browser
-super + w
-	/usr/bin/distrobx-enter -n Arch --  /usr/bin/vivaldi-stable
+super + b
+	xdg-open https://
 
 # Discord
 alt + n
@@ -35,16 +35,19 @@ alt + r
     ranwal.sh
 
 # Make screenshot
-ctrl + alt + s
+super + shift + s 
 	flameshot gui
 
 #Audio Keybindings
 
-alt + d
+XF86AudioRaiseVolume
     pactl set-sink-volume @DEFAULT_SINK@ +5%
 
-alt + a
+XF86AudioLowerVolume
     pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+XF86AudioMute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 alt + {h,j,k,l}
    mpc {prev,next,play,pause}
