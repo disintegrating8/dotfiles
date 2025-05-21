@@ -6,8 +6,8 @@ pgrep -x dunst > /dev/null || dunst -config $HOME/.config/bspwm/dunstrc &
 pgrep -x picom > /dev/null || picom --config $HOME/.config/bspwm/picom.conf &
 
 xrandr --output DP-4 --mode 2560x1440 --rate 240
-
-# ~/.fehbg &
+ 
+~/.fehbg &
 
 /usr/libexec/polkit-gnome-authentication-agent-1 &
 #deckmaster -deck ~/.config/deck/main.deck &

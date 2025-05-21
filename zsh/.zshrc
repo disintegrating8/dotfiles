@@ -4,6 +4,11 @@ export SUDO_EDITOR="$EDITOR"
 
 export PATH=$PATH:/usr/local/go/bin
 
+plugins=(
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)
+
 HISTFILE=~/.history
 HISTSIZE=10000
 SAVEHIST=50000

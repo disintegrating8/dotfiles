@@ -10,6 +10,10 @@ super + space
 super + x
 	powermenu
 
+# Fehbg
+super + shift + w
+        feh --randomize --bg-fill ~/Pictures/backgrounds/*
+
 # Open file manager
 super + shift + Return
 	thunar
