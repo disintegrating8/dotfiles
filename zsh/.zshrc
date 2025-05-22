@@ -9,6 +9,26 @@ plugins=(
     zsh-syntax-highlighting
 )
 
+fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
+
+# aliases for multiple directory listing commands
+alias bl='brew list'
+alias bi='brew install'
+alias bic='brew install --cask'
+alias bs='brew search'
+alias br='brew remove'
+alias ff='fastfetch'
+
+# Automatically do an ls after each cd, z, or zoxide
+cd ()
+{
+	if [ -n "$1" ]; then
+		builtin cd "$@" && ls
+	else
+		builtin cd ~ && ls
+	fi
+}
+
 HISTFILE=~/.history
 HISTSIZE=10000
 SAVEHIST=50000
