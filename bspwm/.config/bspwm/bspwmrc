@@ -1,12 +1,32 @@
 #! /bin/bash
 
+# Environment Variables
+# Input Method
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+
+export EDITOR=nvim
+
+# XDG Specifications
+export XDG_CURRENT_DESKTOP=bspwm
+export XDG_SESSION_DESKTOP=bspwm
+export XDG_SESSION_TYPE=x11
+
+# QT Variables
+export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_QPA_PLATFORMTHEME=qt6ct
+
+# Startup Applicaitons
 pgrep -x sxhkd > /dev/null || sxhkd -c $HOME/.config/bspwm/sxhkdrc &
 $HOME/.config/polybar/launch.sh &
 pgrep -x dunst > /dev/null || dunst -config $HOME/.config/bspwm/dunstrc &
 pgrep -x picom > /dev/null || picom --config $HOME/.config/bspwm/picom.conf &
 
 xrandr --output DP-4 --mode 2560x1440 --rate 240
- 
+
+ibus-daemon -rxRd
+
 ~/.fehbg &
 
 /usr/libexec/polkit-gnome-authentication-agent-1 &
@@ -23,3 +43,14 @@ bspc config focus_follows_pointer true
 bspc config presel_feedback_color "#d4be98"
 
 bspc rule -a Steam state=floating
+bspc rule -a steam state=floating
+bpsc rule -a steam_app_.* state=floating
+
+bspc rule -a Brave-browser desktop='^2'
+
+bspc rule -a Steam desktop='^5'
+bspc rule -a steam desktop='^5'
+
+bspc rule -a discord desktop='^7'
+
+bspc rule -a steam_app_.* desktop='^8'

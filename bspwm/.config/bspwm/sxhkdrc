@@ -10,6 +10,8 @@ super + space
 super + x
 	powermenu
 
+super + e
+	thunar
 # Fehbg
 super + shift + w
         feh --randomize --bg-fill ~/Pictures/backgrounds/*
