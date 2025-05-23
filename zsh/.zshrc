@@ -18,6 +18,7 @@ alias bic='brew install --cask'
 alias bs='brew search'
 alias br='brew remove'
 alias ff='fastfetch'
+alias rt='yabai --restart-service && skhd --restart-service && brew services restart sketchybar && brew services restart borders'
 
 # Automatically do an ls after each cd, z, or zoxide
 cd ()
