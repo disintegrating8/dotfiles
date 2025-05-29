@@ -17,6 +17,7 @@ alias bi='brew install'
 alias bic='brew install --cask'
 alias bs='brew search'
 alias br='brew remove'
+alias bu='brew update && brew upgrade'
 alias ff='fastfetch'
 alias rt='yabai --restart-service && skhd --restart-service && brew services restart sketchybar && brew services restart borders'
 
