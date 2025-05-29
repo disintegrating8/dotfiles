@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # change window focus within space
+alt - h : yabai -m window --focus west
 alt - j : yabai -m window --focus south
 alt - k : yabai -m window --focus north
-alt - h : yabai -m window --focus west
 alt - l : yabai -m window --focus east
 
 #change focus between external displays (left and right)
@@ -74,3 +74,4 @@ ctrl + alt - r : yabai --restart-service
 # Opening Applications
 alt - return : open -a 'kitty'
 alt - b : open -a 'Brave Browser'
+alt - d : open -a 'Vesktop'
