@@ -9,6 +9,9 @@ plugins=(
     zsh-syntax-highlighting
 )
 
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
 
 # aliases for multiple directory listing commands
