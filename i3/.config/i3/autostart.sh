@@ -16,16 +16,14 @@ dunst &
 
 [ ! -s ~/.config/mpd/pid ] && mpd &
 /usr/libexec/polkit-gnome-authentication-agent-1 &
-#/usr/lib/polkit-kde-authentication-agent-1 &
 
-#sxhkd
-sxhkd -c $HOME/myrepo/i3/sxhkd/sxhkdrc &
+sxhkd -c $HOME/.config/i3/sxhkdrc &
 
 # Environment Variables
 # Input Method
-export GTK_IM_MODULE=ibus
-export QT_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
+export GTK_IM_MODULE=kime
+export QT_IM_MODULE=kime
+export XMODIFIERS=@im=kime
 
 export EDITOR=nvim
 

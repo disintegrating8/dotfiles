@@ -18,17 +18,3 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
-
-bindsym $mod+Shift+s layout stacking
-bindsym $mod+Shift+t layout tabbed
-bindsym $mod+e layout toggle split
-bindsym $mod+v [class="vol"] scratchpad show; move position center
-bindsym $mod+n [class="ttrm"] scratchpad show; move position center
-bindsym $mod+m [class="mus"] scratchpad show; move position center
-bindsym $mod+b [class="news"] scratchpad show; move position center
-bindsym $mod+c [class="fm"] scratchpad show; move position center
-exec_always --no-startup-id pgrep -f '^kitty --class ttrm,ttrm' || kitty --class ttrm,ttrm
-exec_always --no-startup-id pgrep -f '^kitty --class vol,vol' || kitty --class vol,vol -e pulsemixer
-exec_always --no-startup-id pgrep -f '^kitty --class news,news' || kitty --class news,news -e newsboat
-exec_always --no-startup-id pgrep -f '^kitty --class mus,mus' || kitty --class mus,mus -e ncmpcpp
-exec_always --no-startup-id pgrep -f '^kitty --class fm,fm' || kitty --class fm,fm -e ranger
