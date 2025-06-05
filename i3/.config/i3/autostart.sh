@@ -1,12 +1,9 @@
 #!/bin/sh
 
-xrandr --output DP-4 --mode 2560x1440 --rate 240
-
 # compositor
 killall picom
 while pgrep -u $UID -x picom >/dev/null; do sleep 1; done
 picom --config ~/.config/picom/picom.conf --vsync &
-flatpak run com.borgbase.Vorta &
 
 ~/.config/polybar/launch.sh &
 
@@ -16,7 +13,6 @@ flatpak run com.borgbase.Vorta &
 clipmenud &
 ssh-add &
 dunst &
-autotiling &
 
 [ ! -s ~/.config/mpd/pid ] && mpd &
 /usr/libexec/polkit-gnome-authentication-agent-1 &
