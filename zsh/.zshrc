@@ -1,13 +1,9 @@
 eval "$(starship init zsh)"
 export EDITOR="nvim"
+export TERM="kitty"
 export SUDO_EDITOR="$EDITOR"
 
-export PATH=$PATH:/usr/local/go/bin
-
-plugins=(
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-)
+export PATH=$PATH:~/.local/bin/
 
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -34,12 +30,11 @@ cd ()
 	fi
 }
 
-HISTFILE=~/.history
-HISTSIZE=10000
+HISTFILE=~/.zsh_history
+HISTSIZE=50000
 SAVEHIST=50000
-
-setopt inc_append_history
+setopt INC_APPEND_HISTORY
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+[ -f /opt/homebrew/share/autojump ] && . /opt/homebrew/share/autojump
