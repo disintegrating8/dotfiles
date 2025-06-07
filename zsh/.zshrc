@@ -1,7 +1,4 @@
 eval "$(starship init zsh)"
-export EDITOR="nvim"
-export TERM="kitty"
-export SUDO_EDITOR="$EDITOR"
 
 export PATH=$PATH:~/.local/bin/
 
