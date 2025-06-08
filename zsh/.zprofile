@@ -1,5 +1,0 @@
-export EDITOR="nvim"
-export TERM="kitty"
-export TERMINAL="kitty"
-export BROWSER="brave-browser"
-export BROWSER2="librewolf"
