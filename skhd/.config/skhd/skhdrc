@@ -74,4 +74,4 @@ ctrl + alt - r : yabai --restart-service
 # Opening Applications
 alt - return : open -a 'kitty'
 alt - b : open -a 'Brave Browser'
-alt - d : open -a 'Vesktop'
+alt - d : open -a 'discord'
