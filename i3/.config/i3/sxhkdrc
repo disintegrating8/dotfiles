@@ -88,3 +88,6 @@ super + ctrl + {h,j,k,l}
 
 super + y
     polybar-msg cmd toggle
+
+super + ctrl + q
+    $HOME/.config/rofi/powermenu.sh
