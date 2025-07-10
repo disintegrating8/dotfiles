@@ -1,9 +1,14 @@
 eval "$(starship init zsh)"
 
 export PATH=$PATH:~/.local/bin/
-
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  
+if [[ $(uname -m) == "arm64" ]]; then
+    source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+else
+    source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
 fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
 
