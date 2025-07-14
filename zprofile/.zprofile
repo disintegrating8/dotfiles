@@ -14,6 +14,9 @@ export QT_QPA_PLATFORMTHEME=qt6ct
 export QT_SCALE_FACTOR=1
 export ELECTRON_OZONE_PLATFORM_HINT=x11
 
+export XCURSOR_THEME=Bibata-Modern-Ice
+export XCURSOR_SIZE=24
+
 export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
