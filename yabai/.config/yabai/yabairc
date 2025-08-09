@@ -39,7 +39,7 @@ yabai -m config external_bar               all:32:0     \
 
 # Exclude problematic apps from being managed:
 yabai -m rule --add app="^(System Settings|Dictionary|Photo Booth|Archive Utility|Calculator)$" manage=off
-yabai -m rule --add app="^(VLC|IINA|Karabiner-Elements)$" manage=off
+yabai -m rule --add app="^(VLC|IINA|Karabiner-Elements|LinearMouse)$" manage=off
 
 yabai -m config layout bsp
 

@@ -69,9 +69,9 @@ shift + alt - 0 : yabai -m window --space  10; yabai -m space --focus 10
 # stop/start/restart yabai
 ctrl + alt - q : yabai --stop-service
 ctrl + alt - s : yabai --start-service
-ctrl + alt - r : yabai --restart-service
+f17 : yabai --restart-service
 
 # Opening Applications
 alt - return : open -a 'kitty'
 alt - b : open -a 'Brave Browser'
-alt - d : open -a 'discord'
+alt - v : open -a 'discord'
