@@ -1,4 +1,4 @@
-# history opts
+# History opts
 HISTSIZE=1000000
 SAVEHIST=1000000
 HISTFILE="$XDG_CACHE_HOME/zsh_history" # move histfile to cache
@@ -18,15 +18,13 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # Alias's to modified commands
 alias cp='cp -i'
 alias mv='mv -i'
-#alias rm='trash -v'
+alias rm='trash -v'
 alias mkdir='mkdir -p'
 alias ps='ps auxf'
 alias ping='ping -c 10'
 alias less='less -R'
 alias cls='clear'
-alias apt-get='sudo apt-get'
-alias multitail='multitail --no-repeat -c'
-alias freshclam='sudo freshclam'
+alias pacman='sudo pacman'
 alias vi='nvim'
 alias svi='sudo vi'
 alias vis='nvim "+set si"'
@@ -130,6 +128,7 @@ alias docker-clean=' \
   docker volume prune -f '
 
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     exec startx

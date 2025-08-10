@@ -6,8 +6,8 @@ export QT_QPA_PLATFORM=xcb
 export CLUTTER_BACKEND=x11
 
 # xdg Specifications
-export XDG_CURRENT_DESKTOP=DWM
-export XDG_SESSION_DESKTOP=DWM
+export XDG_CURRENT_DESKTOP=dwm
+export XDG_SESSION_DESKTOP=dwm
 export XDG_SESSION_TYPE=x11
 
 # QT Variables
@@ -30,3 +30,4 @@ export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 
 export EDITOR=nvim
+export BROWSER=brave
