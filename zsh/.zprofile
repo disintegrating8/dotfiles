@@ -16,6 +16,9 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 export QT_QPA_PLATFORMTHEME=qt6ct
 export QT_SCALE_FACTOR=1
 
+# GTK Theme
+export GTK_THEME="Flat-Remix-GTK-Blue-Dark"
+
 # Bibata-Modern-Ice-Cursor
 export XCURSOR_THEME=Bibata-Modern-Ice
 export XCURSOR_SIZE=24
