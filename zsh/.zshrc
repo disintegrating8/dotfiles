@@ -130,8 +130,7 @@ alias docker-clean=' \
   docker volume prune -f '
 
 eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
 
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-    exec startx
-fi
+#if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+#    exec startx
+#fi
