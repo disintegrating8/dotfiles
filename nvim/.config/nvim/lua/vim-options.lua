@@ -12,6 +12,12 @@ vim.g.have_nerd_font = true
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
+-- Set tab as 4 spaces
+vim.opt.tabstop = 4 -- number of spaces a TAB counts for
+vim.opt.shiftwdith = 4 -- number of spaces for autoindent
+vim.opt.softtabstop = 4 -- number of spaces when pressing <Tab>
+vim.opt.expandtab = true -- converts tabs to spaces
+
 -- Make line numbers default
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
