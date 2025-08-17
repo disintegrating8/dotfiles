@@ -14,7 +14,7 @@ vim.g.have_nerd_font = true
 
 -- Set tab as 4 spaces
 vim.opt.tabstop = 4 -- number of spaces a TAB counts for
-vim.opt.shiftwdith = 4 -- number of spaces for autoindent
+vim.opt.shiftwidth = 4 -- number of spaces for autoindent
 vim.opt.softtabstop = 4 -- number of spaces when pressing <Tab>
 vim.opt.expandtab = true -- converts tabs to spaces
 
