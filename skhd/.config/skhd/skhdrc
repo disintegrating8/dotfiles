@@ -69,7 +69,7 @@ shift + alt - 0 : yabai -m window --space  10; yabai -m space --focus 10
 # stop/start/restart yabai
 ctrl + alt - q : yabai --stop-service
 ctrl + alt - s : yabai --start-service
-f17 : yabai --restart-service
+ctrl + alt - r : yabai --restart-service
 
 # Opening Applications
 alt - return : open -a 'kitty'

@@ -44,7 +44,6 @@ yabai -m rule --add app="^(VLC|IINA|Karabiner-Elements|LinearMouse)$" manage=off
 yabai -m config layout bsp
 
 # Assign apps to specific workspace
-yabai -m rule --add app="^[Kk]itty$" space=1
 yabai -m rule --add app="^([Ss]afari|[Ff]irefox|[Ll]ibreWolf|[Zz]en|Brave Browser|Google Chrome|[Qq]utebrowser)$" space=2
 yabai -m rule --add app="^([Dd]iscord|[Vv]esktop|[Ss]ignal)$" space=4
 yabai -m rule --add app="^[Ss]team Helper$" space=5
