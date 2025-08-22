@@ -3,7 +3,6 @@
 
 export PATH=$PATH:~/.local/bin/
 
-alias rt='yabai --restart-service && skhd --restart-service && brew services restart sketchybar && brew services restart borders'
 
 # load modules
 zmodload zsh/complist

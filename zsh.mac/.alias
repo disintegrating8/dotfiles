@@ -114,3 +114,22 @@ alias docker-clean=' \
   docker image prune -f ; \
   docker network prune -f ; \
   docker volume prune -f '
+
+# tiling wm aliases
+alias stop-tile=' \
+  yabai --stop-service; \
+  skhd --stop-service; \
+  brew services stop sketchybar; \
+  brew services stop borders'
+
+alias start-tile=' \
+  yabai --start-service; \
+  skhd --start-service; \
+  brew services start sketchybar; \
+  brew services start borders'
+
+alias restart-tile=' \
+  yabai --restart-service; \
+  skhd --restart-service; \
+  brew services restart sketchybar; \
+  brew services restart borders'
