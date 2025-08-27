@@ -9,6 +9,14 @@ app_switched() {
   # Get the title of the focused window
   title=$(yabai -m query --windows | jq -r '.[] | select(.["has-focus"] == true) | .title')
   
+  # If length > 25, fuck off
+  l=25
+  if [ ${#title} -gt $l ]; then
+    short_title="${title:0:$l}..."
+  else
+    short_title="${title}"
+  fi
+
   # Update all visible spaces with their actual windows
   for sid in $(yabai -m query --spaces | jq -r '.[] | select(.["is-visible"] == true) | .index'); do
     # Build icon strip from actual windows in the space only
@@ -26,7 +34,7 @@ app_switched() {
   done
   
   # Update front app with icon and title
-  sketchybar --set $NAME label="$title"
+  sketchybar --set $NAME label="$short_title"
 }
 
 if [ "$SENDER" = "front_app_switched" ]; then
