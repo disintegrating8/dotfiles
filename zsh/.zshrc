@@ -1,6 +1,5 @@
 # source global shell alias & variables files
-[ -f "$XDG_CONFIG_HOME/shell/alias" ] && source "$XDG_CONFIG_HOME/shell/alias"
-[ -f "$XDG_CONFIG_HOME/shell/vars" ] && source "$XDG_CONFIG_HOME/shell/vars"
+[ -f "$HOME/.alias" ] && source "$HOME/.alias"
 
 # load modules
 zmodload zsh/complist
