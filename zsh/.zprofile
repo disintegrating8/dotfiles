@@ -10,14 +10,11 @@ export PYTHON_HISTORY="$XDG_DATA_HOME/python/history"
 # add scripts to path
 export PATH="$XDG_CONFIG_HOME/scripts:$PATH"
 
-export MANPAGER="less -R --use-color -Dd+r -Du+b" # colored man pages
-
 # colored less + termcap vars
-export LESS="R --use-color -Dd+r -Du+b"
-export LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"
-export LESS_TERMCAP_md="$(printf '%b' '[1;36m')"
-export LESS_TERMCAP_me="$(printf '%b' '[0m')"
-export LESS_TERMCAP_so="$(printf '%b' '[01;44;33m')"
-export LESS_TERMCAP_se="$(printf '%b' '[0m')"
-export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
-export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
+export LESS_TERMCAP_mb=$'\e[01;31m'       # begin blinking
+export LESS_TERMCAP_md=$'\e[01;37m'       # begin bold
+export LESS_TERMCAP_me=$'\e[0m'           # end all mode like so, us, mb, md, mr
+export LESS_TERMCAP_se=$'\e[0m'           # end standout-mode
+export LESS_TERMCAP_so=$'\e[45;93m'       # start standout mode
+export LESS_TERMCAP_ue=$'\e[0m'           # end underline
+export LESS_TERMCAP_us=$'\e[4;93m'        # start underlining
