@@ -7,9 +7,9 @@ alias ps='ps auxf'
 alias ping='ping -c 10'
 alias less='less -R'
 alias cls='clear'
-alias pacman='pman'
-alias vi='nvim'
-alias svi='sudo vi'
+alias pman='sudo pacman'
+alias v='nvim'
+alias sv='sudo nvim'
 alias vis='nvim "+set si"'
 alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
 
