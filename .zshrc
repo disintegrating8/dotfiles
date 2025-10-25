@@ -29,7 +29,7 @@ stty stop undef # disable accidental ctrl s
 # history opts
 HISTSIZE=1000000
 SAVEHIST=1000000
-HISTFILE="$XDG_CACHE_HOME/zsh_history" # move histfile to cache
+HISTFILE="$HOME/.cache/zsh_history" # move histfile to cache
 HISTCONTROL=ignoreboth # consecutive duplicates & commands starting with space are not saved
 
 # fzf setup
@@ -47,14 +47,22 @@ bindkey "^J" history-search-forward
 bindkey "^K" history-search-backward
 bindkey '^R' fzf-history-widget
 
-[ -f /usr/bin/fastfetch ] && fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
+fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
 
 # set up prompt
 eval "$(starship init zsh)"
 
-#if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-#    exec startx
-#fi
-
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [[ $(uname) == "Linux" ]]; then
+    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+elif [[ $(uname) == "Darwin" ]]; then
+    if [[ $(uname -m) == "arm64" ]]; then
+        source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+        source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    else
+        source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+        source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    fi
+else
+    echo "Cannot source zsh plugins, Unknown OS: $(uname)"
+fi

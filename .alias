@@ -1,7 +1,7 @@
 # Alias's to modified commands
 alias cp='cp -i'
 alias mv='mv -i'
-#alias rm='trash -v'
+alias rm='trash -v'
 alias mkdir='mkdir -p'
 alias ps='ps auxf'
 alias ping='ping -c 10'
@@ -9,6 +9,7 @@ alias less='less -R'
 alias cls='clear'
 alias v='nvim'
 alias sv='sudo nvim'
+alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
 
 # shorten commands for hombrew
 alias bl='brew list'
@@ -42,7 +43,7 @@ alias lm='ls -alh |more'          # pipe through 'more'
 alias lw='ls -xAh'                # wide listing format
 alias ll='ls -Fls'                # long listing format
 alias labc='ls -lap'              # alphabetical sort
-alias llf="ls -l | egrep -v '^d'"  # files only
+alias lf="ls -l | egrep -v '^d'"  # files only
 alias ldir="ls -l | egrep '^d'"   # directories only
 alias lla='ls -Al'                # List and Hidden Files
 alias las='ls -A'                 # Hidden Files
@@ -115,21 +116,4 @@ alias docker-clean=' \
   docker network prune -f ; \
   docker volume prune -f '
 
-# tiling wm aliases
-alias stop-tile=' \
-  yabai --stop-service; \
-  skhd --stop-service; \
-  brew services stop sketchybar; \
-  brew services stop borders'
 
-alias start-tile=' \
-  yabai --start-service; \
-  skhd --start-service; \
-  brew services start sketchybar; \
-  brew services start borders'
-
-alias restart-tile=' \
-  yabai --restart-service; \
-  skhd --restart-service; \
-  brew services restart sketchybar; \
-  brew services restart borders'
