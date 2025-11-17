@@ -1,4 +1,4 @@
-# source global shell alias & variables files
+# source global shell alias
 [ -f "$HOME/.alias" ] && source "$HOME/.alias"
 
 # load modules
@@ -9,7 +9,7 @@ autoload -U colors && colors
 # cmp opts
 zstyle ':completion:*' menu select # tab opens cmp menu
 zstyle ':completion:*' special-dirs true # force . and .. to show in cmp menu
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} ma=0\;33 # colorize cmp menu
+# zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} ma=0\;33 # colorize cmp menu
 # zstyle ':completion:*' file-list true # more detailed list
 zstyle ':completion:*' squeeze-slashes false # explicit disable to allow /*/ expansion
 
@@ -24,7 +24,7 @@ setopt globdots # include dotfiles
 setopt extended_glob # match ~ # ^
 setopt interactive_comments # allow comments in shell
 unsetopt prompt_sp # don't autoclean blanklines
-stty stop undef # disable accidental ctrl s
+stty stop undef # Disable ctrl-s to freeze terminal
 
 # history opts
 HISTSIZE=1000000
@@ -34,6 +34,17 @@ HISTCONTROL=ignoreboth # consecutive duplicates & commands starting with space a
 
 # fzf setup
 source <(fzf --zsh) # allow for fzf history widget
+
+# vi mode
+bindkey -v
+export KEYTIMEOUT=1
+
+# Use vim keys in tab complete menu:
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -v '^?' backward-delete-char
 
 # binds
 bindkey "^a" beginning-of-line
@@ -47,10 +58,10 @@ bindkey "^J" history-search-forward
 bindkey "^K" history-search-backward
 bindkey '^R' fzf-history-widget
 
-fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
+# fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
 
 # set up prompt
-eval "$(starship init zsh)"
+PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
 if [[ $(uname) == "Linux" ]]; then
     source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
