@@ -64,8 +64,13 @@ bindkey '^R' fzf-history-widget
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
 if [[ $(uname) == "Linux" ]]; then
-    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    if command -v pacman &>/dev/null; then
+        source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+        source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    elif command -v apt &>/dev/null; then
+        source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+        source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    fi
 elif [[ $(uname) == "Darwin" ]]; then
     if [[ $(uname -m) == "arm64" ]]; then
         source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
