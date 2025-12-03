@@ -73,5 +73,5 @@ ctrl + alt - r : yabai --restart-service
 
 # Opening Applications
 alt - return : open -a 'kitty'
-alt - b : open -na Floorp --args -P
+alt - b : open -a 'Brave Browser'
 alt - e : open -a 'finder'
